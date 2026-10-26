@@ -1,0 +1,29 @@
+{
+  "name": "calma-rosacea",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Prototipo web educativo de compatibilidad cosmética para piel con rosácea, con OCR local y motor de reglas explicable.",
+  "keywords": [
+    "rosácea",
+    "skincare",
+    "compatibilidad",
+    "OCR",
+    "Tesseract.js",
+    "salud",
+    "cosmética"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node app/server.js",
+    "dev": "node app/server.js",
+    "build": "node scripts/build-static.js",
+    "seo": "node scripts/build-static.js",
+    "test": "node app/tests/motor.test.js",
+    "deploy:vercel": "npx vercel --prod",
+    "deploy:firebase": "npm run build && npx firebase-tools deploy --only hosting"
+  }
+}
